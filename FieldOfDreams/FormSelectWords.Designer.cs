@@ -55,9 +55,9 @@
             this.radioButtonFlowers.Name = "radioButtonFlowers";
             this.radioButtonFlowers.Size = new System.Drawing.Size(81, 24);
             this.radioButtonFlowers.TabIndex = 2;
-            this.radioButtonFlowers.TabStop = true;
             this.radioButtonFlowers.Text = "цветы";
             this.radioButtonFlowers.UseVisualStyleBackColor = true;
+            this.radioButtonFlowers.CheckedChanged += new System.EventHandler(this.radioButtonFlowers_CheckedChanged);
             // 
             // radioButtonFruits
             // 
@@ -66,9 +66,9 @@
             this.radioButtonFruits.Name = "radioButtonFruits";
             this.radioButtonFruits.Size = new System.Drawing.Size(93, 24);
             this.radioButtonFruits.TabIndex = 1;
-            this.radioButtonFruits.TabStop = true;
             this.radioButtonFruits.Text = "фрукты";
             this.radioButtonFruits.UseVisualStyleBackColor = true;
+            this.radioButtonFruits.CheckedChanged += new System.EventHandler(this.radioButtonFruits_CheckedChanged);
             // 
             // radioButtonAnimals
             // 
@@ -77,9 +77,9 @@
             this.radioButtonAnimals.Name = "radioButtonAnimals";
             this.radioButtonAnimals.Size = new System.Drawing.Size(110, 24);
             this.radioButtonAnimals.TabIndex = 0;
-            this.radioButtonAnimals.TabStop = true;
             this.radioButtonAnimals.Text = "животные";
             this.radioButtonAnimals.UseVisualStyleBackColor = true;
+            this.radioButtonAnimals.Click += new System.EventHandler(this.radioButtonAnimals_Click);
             // 
             // buttonStartGame
             // 

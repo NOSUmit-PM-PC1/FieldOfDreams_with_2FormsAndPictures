@@ -12,6 +12,7 @@ namespace FieldOfDreams
 {
     public partial class FormSelectWords : Form
     {
+        string themeTemp = "";
         public FormSelectWords()
         {
             InitializeComponent();
@@ -20,7 +21,25 @@ namespace FieldOfDreams
         private void buttonStartGame_Click(object sender, EventArgs e)
         {
             FormGame windowGame = new FormGame();
+            windowGame.Theme = themeTemp;
             windowGame.Show();
+        }
+
+
+
+        private void radioButtonAnimals_Click(object sender, EventArgs e)
+        {
+            themeTemp = "animal";
+        }
+
+        private void radioButtonFruits_CheckedChanged(object sender, EventArgs e)
+        {
+            themeTemp = "fruit";
+        }
+
+        private void radioButtonFlowers_CheckedChanged(object sender, EventArgs e)
+        {
+            themeTemp = "flower";
         }
     }
 }

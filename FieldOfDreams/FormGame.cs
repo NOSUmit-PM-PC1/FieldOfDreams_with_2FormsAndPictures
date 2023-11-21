@@ -17,8 +17,11 @@ namespace FieldOfDreams
         string badLetters = "";
         int countErrors = 0;
 
+        public string Theme = "xsfghnsgf";
+
         string[] wordsAnimals = new string[] {"слон", "мышь", "гиппопотам"};
         string[] wordsFruits = new string[] { "яблоко", "банан", "груша" };
+        string[] wordsFlower = new string[] { "ромашка", "роза", "тюльпан" };
 
         Random rnd = new Random();
 
@@ -73,7 +76,13 @@ namespace FieldOfDreams
         public FormGame()
         {
             InitializeComponent();
-            word = RandomWord(wordsFruits);
+            switch (Theme)
+            { 
+                case "animal": word = RandomWord(wordsAnimals); break;
+                case "fruit": word = RandomWord(wordsFruits); break;
+                case "flower": word = RandomWord(wordsFlower); break;
+            }
+            MessageBox.Show(Theme + " " + word);
             template = MakeTemplate(word);
             labelTemplate.Text = template;
         }
